@@ -2500,6 +2500,314 @@ footer p {
   }
 }
 
+
+/* ================================
+   Trust pages: Our Space, Work With Us, FAQ
+================================ */
+
+.spaceSection,
+.careersSection,
+.faqSection {
+  padding: 78px 6%;
+  background: #fffaf7;
+}
+
+.spaceIntro,
+.faqIntro {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spaceIntro h2,
+.faqIntro h2,
+.careersHero h2 {
+  margin: 0;
+  color: #1f2430;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.spaceIntro p,
+.faqIntro p,
+.careersHero p {
+  color: #59636e;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.spaceGrid {
+  max-width: 1180px;
+  margin: 42px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.spaceCard {
+  background: white;
+  border: 1px solid #eadcf7;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(84, 42, 122, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.spaceCard::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  right: -60px;
+  top: -60px;
+  background: radial-gradient(circle, rgba(123, 191, 106, 0.2), transparent 70%);
+}
+
+.spaceIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f5ecff, #eef7e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.spaceCard h3,
+.roleCard h3,
+.applyBand h3,
+.spaceNote h3,
+.careersPanel h3 {
+  margin: 0;
+  color: #55228c;
+  font-size: 22px;
+}
+
+.spaceCard p,
+.roleCard p,
+.applyBand p,
+.spaceNote p {
+  color: #59636e;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.spaceCard span {
+  display: inline-block;
+  margin-top: 8px;
+  background: #eef7e9;
+  color: #48653c;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.spaceNote {
+  max-width: 980px;
+  margin: 34px auto 0;
+  background: linear-gradient(135deg, #ffffff, #f5ecff);
+  border: 1px solid #eadcf7;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(84, 42, 122, 0.08);
+}
+
+.careersSection {
+  background: linear-gradient(135deg, #ffffff, #fffaf7);
+}
+
+.careersHero {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.careersPanel {
+  background: linear-gradient(135deg, #55228c, #6b2fb8);
+  color: white;
+  border-radius: 30px;
+  padding: 32px;
+  box-shadow: 0 22px 55px rgba(84, 42, 122, 0.18);
+}
+
+.careersPanel h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.careersPanel div {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin-top: 12px;
+  color: #f4ecff;
+  font-weight: 800;
+}
+
+.roleGrid {
+  max-width: 1180px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.roleCard {
+  background: white;
+  border: 1px solid #eadcf7;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 15px 40px rgba(84, 42, 122, 0.08);
+}
+
+.applyBand {
+  max-width: 1180px;
+  margin: 36px auto 0;
+  background: #1f2430;
+  color: white;
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.applyBand h3 {
+  color: white;
+}
+
+.applyBand p {
+  color: #cfd8dc;
+  margin-bottom: 0;
+}
+
+.applyBand a {
+  flex: 0 0 auto;
+  background: #2e9b4f;
+  color: white;
+  border-radius: 999px;
+  padding: 15px 24px;
+  font-weight: 900;
+}
+
+.faqSection {
+  background: white;
+}
+
+.faqList {
+  max-width: 980px;
+  margin: 42px auto 0;
+  display: grid;
+  gap: 16px;
+}
+
+.faqItem {
+  background: #fffaf7;
+  border: 1px solid #eadcf7;
+  border-radius: 22px;
+  padding: 0;
+  box-shadow: 0 12px 35px rgba(84, 42, 122, 0.06);
+  overflow: hidden;
+}
+
+.faqItem summary {
+  cursor: pointer;
+  padding: 22px 24px;
+  color: #55228c;
+  font-weight: 900;
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem summary::after {
+  content: "+";
+  color: #2e9b4f;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.faqItem[open] summary::after {
+  content: "–";
+}
+
+.faqItem p {
+  margin: 0;
+  padding: 0 24px 24px;
+  color: #59636e;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .spaceGrid,
+  .roleGrid,
+  .careersHero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .careersHero {
+    grid-template-columns: 1fr;
+  }
+
+  .applyBand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .spaceSection,
+  .careersSection,
+  .faqSection {
+    padding: 58px 5%;
+  }
+
+  .spaceGrid,
+  .roleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaceCard,
+  .roleCard,
+  .spaceNote,
+  .careersPanel,
+  .applyBand {
+    padding: 24px;
+  }
+
+  .faqItem summary {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .faqItem p {
+    padding: 0 20px 20px;
+  }
+
+  .applyBand a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 /* Only the selected page section is visible */
 .page[data-active-page] .hero,
 .page[data-active-page] .whySection,
@@ -2509,12 +2817,19 @@ footer p {
 .page[data-active-page] #support,
 .page[data-active-page] #approach,
 .page[data-active-page] #process,
+.page[data-active-page] #space,
+.page[data-active-page] #careers,
+.page[data-active-page] #faq,
 .page[data-active-page] #contact {
   display: none;
 }
 
 .page[data-active-page="home"] .hero {
   display: grid;
+}
+
+.page[data-active-page="home"] .whySection {
+  display: block;
 }
 
 .page[data-active-page="why"] .whySection {
@@ -2542,6 +2857,18 @@ footer p {
 }
 
 .page[data-active-page="process"] #process {
+  display: block;
+}
+
+.page[data-active-page="space"] #space {
+  display: block;
+}
+
+.page[data-active-page="careers"] #careers {
+  display: block;
+}
+
+.page[data-active-page="faq"] #faq {
   display: block;
 }
 

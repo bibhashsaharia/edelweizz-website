@@ -372,13 +372,6 @@ function App() {
           </button>
           <button
             type="button"
-            className={activePage === "why" ? "active" : ""}
-            onClick={() => goToPage("why")}
-          >
-            Why Edelweizz
-          </button>
-          <button
-            type="button"
             className={activePage === "about" ? "active" : ""}
             onClick={() => goToPage("about")}
           >
@@ -407,17 +400,24 @@ function App() {
           </button>
           <button
             type="button"
-            className={activePage === "approach" ? "active" : ""}
-            onClick={() => goToPage("approach")}
+            className={activePage === "space" ? "active" : ""}
+            onClick={() => goToPage("space")}
           >
-            Approach
+            Our Space
           </button>
           <button
             type="button"
-            className={activePage === "process" ? "active" : ""}
-            onClick={() => goToPage("process")}
+            className={activePage === "careers" ? "active" : ""}
+            onClick={() => goToPage("careers")}
           >
-            How It Works
+            Work With Us
+          </button>
+          <button
+            type="button"
+            className={activePage === "faq" ? "active" : ""}
+            onClick={() => goToPage("faq")}
+          >
+            FAQ
           </button>
           <button
             type="button"
@@ -480,9 +480,6 @@ function App() {
                 <button type="button" onClick={() => goToPage("home")}>
                   Home
                 </button>
-                <button type="button" onClick={() => goToPage("why")}>
-                  Why Edelweizz
-                </button>
                 <button type="button" onClick={() => goToPage("about")}>
                   About
                 </button>
@@ -495,11 +492,14 @@ function App() {
                 <button type="button" onClick={() => goToPage("support")}>
                   Who We Support
                 </button>
-                <button type="button" onClick={() => goToPage("approach")}>
-                  Approach
+                <button type="button" onClick={() => goToPage("space")}>
+                  Our Space
                 </button>
-                <button type="button" onClick={() => goToPage("process")}>
-                  How It Works
+                <button type="button" onClick={() => goToPage("careers")}>
+                  Work With Us
+                </button>
+                <button type="button" onClick={() => goToPage("faq")}>
+                  FAQ
                 </button>
                 <button type="button" onClick={() => goToPage("contact")}>
                   Contact
@@ -759,6 +759,187 @@ function App() {
           </div>
         </div>
       </section>
+
+
+      <section id="space" className="spaceSection">
+        <div className="spaceIntro">
+          <p className="smallTitle">Our Space</p>
+          <h2>A calm, child-friendly therapy environment in Sarjapur.</h2>
+          <p>
+            We are preparing Edelweizz as a warm and structured space where
+            children feel safe, parents feel welcomed, and therapy can happen
+            with clarity, dignity, and comfort.
+          </p>
+        </div>
+
+        <div className="spaceGrid">
+          {[
+            {
+              icon: "🗣️",
+              title: "Speech & Communication Room",
+              text: "A focused setting for language, communication, articulation, and social interaction support.",
+            },
+            {
+              icon: "✋",
+              title: "Occupational Therapy Zone",
+              text: "A practical space for sensory regulation, motor skills, coordination, and daily living readiness.",
+            },
+            {
+              icon: "📘",
+              title: "Learning Support Corner",
+              text: "A structured area for special education, school readiness, attention, and learning support.",
+            },
+            {
+              icon: "🌿",
+              title: "Sensory-Friendly Environment",
+              text: "Soft, respectful, and child-aware surroundings designed to reduce overwhelm and build comfort.",
+            },
+            {
+              icon: "👨‍👩‍👦",
+              title: "Parent Waiting & Guidance Area",
+              text: "A welcoming space where parents can speak to the team, understand goals, and receive home-practice guidance.",
+            },
+            {
+              icon: "🧩",
+              title: "Play-Based Therapy Setup",
+              text: "Therapy materials and activity spaces that make learning engaging, meaningful, and child-led.",
+            },
+          ].map((item) => (
+            <div className="spaceCard" key={item.title}>
+              <div className="spaceIcon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span>Opening Soon</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="spaceNote">
+          <h3>Real photos coming soon</h3>
+          <p>
+            Once the Sarjapur center setup is complete, this page will be
+            updated with actual photos of the therapy rooms, learning spaces,
+            parent area, and child-friendly activity zones.
+          </p>
+        </div>
+      </section>
+
+      <section id="careers" className="careersSection">
+        <div className="careersHero">
+          <div>
+            <p className="smallTitle">Work With Us</p>
+            <h2>Join a therapy center being built with purpose, empathy, and professional care.</h2>
+            <p>
+              Edelweizz is looking for therapists and educators who believe
+              that every child deserves patient, respectful, evidence-informed,
+              and family-aware support.
+            </p>
+          </div>
+
+          <div className="careersPanel">
+            <h3>We value</h3>
+            <div>Clinical discipline</div>
+            <div>Warm communication</div>
+            <div>Parent partnership</div>
+            <div>Child-first thinking</div>
+          </div>
+        </div>
+
+        <div className="roleGrid">
+          {[
+            "Speech Therapist",
+            "Occupational Therapist",
+            "Behaviour Therapist",
+            "Special Educator",
+            "Early Intervention Professional",
+            "Therapy Coordinator",
+          ].map((role) => (
+            <div className="roleCard" key={role}>
+              <h3>{role}</h3>
+              <p>
+                We welcome professionals who can work with children
+                thoughtfully, document progress clearly, and collaborate with
+                families and the multidisciplinary team.
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="applyBand">
+          <div>
+            <h3>Interested in working with Edelweizz?</h3>
+            <p>
+              Share your profile with us on WhatsApp. Relevant certification,
+              experience, and child-centered communication will be important.
+            </p>
+          </div>
+
+          <a href="https://wa.me/919886261567">Apply on WhatsApp</a>
+        </div>
+      </section>
+
+      <section id="faq" className="faqSection">
+        <div className="faqIntro">
+          <p className="smallTitle">FAQ</p>
+          <h2>Common questions parents ask before starting therapy.</h2>
+          <p>
+            These answers are meant to give parents clarity. A proper therapy
+            plan is always created after understanding the child’s needs,
+            strengths, history, and family goals.
+          </p>
+        </div>
+
+        <div className="faqList">
+          {[
+            {
+              question: "Do we need an assessment before therapy starts?",
+              answer:
+                "Yes. An initial assessment helps us understand the child’s current strengths, challenges, communication style, sensory needs, behaviour patterns, and parent concerns before planning therapy.",
+            },
+            {
+              question: "Which therapies will Edelweizz provide?",
+              answer:
+                "Edelweizz will support children through speech therapy, occupational therapy, behaviour therapy, ABA therapy, special education, parent counselling, and early intervention support where appropriate.",
+            },
+            {
+              question: "Do you support children with autism?",
+              answer:
+                "Yes. We support children with autism spectrum needs through structured, respectful, child-centered therapy plans. The focus is on communication, regulation, learning, independence, and family support.",
+            },
+            {
+              question: "Will parents receive progress updates?",
+              answer:
+                "Yes. Parent communication is central to Edelweizz. We believe parents should understand goals, progress, next steps, and simple home-practice activities.",
+            },
+            {
+              question: "Can therapy goals be continued at home?",
+              answer:
+                "Yes. Therapy works best when small, practical activities are continued at home. We guide parents with simple steps that fit into daily routines.",
+            },
+            {
+              question: "What age group do you support?",
+              answer:
+                "We support young children, school-age children, and adolescents based on developmental need. Early intervention support is also part of the Edelweizz vision.",
+            },
+            {
+              question: "Where is the center located?",
+              answer:
+                "Edelweizz Pediatric Therapy Center is located opposite Muneshwara Temple, Volagere Kallahalli, Chembanahalli Road, Karnataka 562125.",
+            },
+            {
+              question: "How can I book an assessment?",
+              answer:
+                "You can contact us on WhatsApp or call 9886261567. We will guide you on assessment availability, documents to bring, and the next steps.",
+            },
+          ].map((item) => (
+            <details className="faqItem" key={item.question}>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
 
       <section id="contact" className="contact">
   <div className="contactIntro">
