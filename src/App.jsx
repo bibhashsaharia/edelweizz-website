@@ -332,34 +332,191 @@ function VisionSection() {
   );
 }
 function App() {
-  return (
-    <main id="top" className="page">
-      <header className="header">
-      <a className="brand" href="#top">
-      <img
-  src={iconLogo}
-  alt="Edelweizz Pediatric Therapy Center logo"
-  className="siteLogo"
-/>
-  <div>
-    <h1>Edelweizz</h1>
-    <p>Pediatric Therapy Center</p>
-  </div>
-</a>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activePage, setActivePage] = useState("home");
 
-        <nav className="navMenu">
-        <a href="#why-edelweizz">Why Edelweizz</a>
-        <a href="#about">About</a>
-        <a href="#vision">Vision</a>
-          <a href="#services">Services</a>
-          <a href="#support">Who We Support</a>
-          <a href="#approach">Approach</a>
-          <a href="#contact">Contact</a>
+  const goToPage = (page) => {
+    setActivePage(page);
+    setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  return (
+    <main id="top" className="page" data-active-page={activePage}>
+      <header className="header">
+        <button
+          className="brand"
+          type="button"
+          onClick={() => goToPage("home")}
+        >
+          <img
+            src={iconLogo}
+            alt="Edelweizz Pediatric Therapy Center logo"
+            className="siteLogo"
+          />
+          <div>
+            <h1>Edelweizz</h1>
+            <p>Pediatric Therapy Center</p>
+          </div>
+        </button>
+
+        <nav className="navMenu" aria-label="Main navigation">
+          <button
+            type="button"
+            className={activePage === "home" ? "active" : ""}
+            onClick={() => goToPage("home")}
+          >
+            Home
+          </button>
+          <button
+            type="button"
+            className={activePage === "why" ? "active" : ""}
+            onClick={() => goToPage("why")}
+          >
+            Why Edelweizz
+          </button>
+          <button
+            type="button"
+            className={activePage === "about" ? "active" : ""}
+            onClick={() => goToPage("about")}
+          >
+            About
+          </button>
+          <button
+            type="button"
+            className={activePage === "vision" ? "active" : ""}
+            onClick={() => goToPage("vision")}
+          >
+            Vision
+          </button>
+          <button
+            type="button"
+            className={activePage === "services" ? "active" : ""}
+            onClick={() => goToPage("services")}
+          >
+            Services
+          </button>
+          <button
+            type="button"
+            className={activePage === "support" ? "active" : ""}
+            onClick={() => goToPage("support")}
+          >
+            Who We Support
+          </button>
+          <button
+            type="button"
+            className={activePage === "approach" ? "active" : ""}
+            onClick={() => goToPage("approach")}
+          >
+            Approach
+          </button>
+          <button
+            type="button"
+            className={activePage === "process" ? "active" : ""}
+            onClick={() => goToPage("process")}
+          >
+            How It Works
+          </button>
+          <button
+            type="button"
+            className={activePage === "contact" ? "active" : ""}
+            onClick={() => goToPage("contact")}
+          >
+            Contact
+          </button>
         </nav>
 
-        <a className="topButton" href="#contact">
-          Book Assessment
-        </a>
+        <div className="headerActions">
+          <button
+            className="topButton"
+            type="button"
+            onClick={() => goToPage("contact")}
+          >
+            Book Assessment
+          </button>
+
+          <button
+            className="menuButton"
+            type="button"
+            onClick={() => setIsMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        {isMenuOpen && (
+          <div className="mobileMenuBackdrop" onClick={closeMenu}>
+            <aside
+              className="mobileMenu"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="mobileMenuTop">
+                <div className="mobileBrand">
+                  <img
+                    src={iconLogo}
+                    alt="Edelweizz Pediatric Therapy Center logo"
+                    className="mobileMenuLogo"
+                  />
+                  <div>
+                    <h3>Edelweizz</h3>
+                    <p>Pediatric Therapy Center</p>
+                  </div>
+                </div>
+
+                <button
+                  className="closeMenuButton"
+                  type="button"
+                  onClick={closeMenu}
+                  aria-label="Close menu"
+                >
+                  ×
+                </button>
+              </div>
+
+              <nav className="mobileLinks" aria-label="Mobile navigation">
+                <button type="button" onClick={() => goToPage("home")}>
+                  Home
+                </button>
+                <button type="button" onClick={() => goToPage("why")}>
+                  Why Edelweizz
+                </button>
+                <button type="button" onClick={() => goToPage("about")}>
+                  About
+                </button>
+                <button type="button" onClick={() => goToPage("vision")}>
+                  Vision
+                </button>
+                <button type="button" onClick={() => goToPage("services")}>
+                  Services
+                </button>
+                <button type="button" onClick={() => goToPage("support")}>
+                  Who We Support
+                </button>
+                <button type="button" onClick={() => goToPage("approach")}>
+                  Approach
+                </button>
+                <button type="button" onClick={() => goToPage("process")}>
+                  How It Works
+                </button>
+                <button type="button" onClick={() => goToPage("contact")}>
+                  Contact
+                </button>
+              </nav>
+
+              <div className="mobileMenuContact">
+                <a href="https://wa.me/919886261567" onClick={closeMenu}>
+                  WhatsApp Us
+                </a>
+                <a href="tel:+919886261567" onClick={closeMenu}>
+                  Call 9886261567
+                </a>
+              </div>
+            </aside>
+          </div>
+        )}
       </header>
 
       <section className="hero">
@@ -377,12 +534,20 @@ function App() {
           </p>
 
           <div className="heroButtons">
-            <a className="primaryButton" href="#contact">
+            <button
+              className="primaryButton"
+              type="button"
+              onClick={() => goToPage("contact")}
+            >
               Book an Assessment
-            </a>
-            <a className="secondaryButton" href="#services">
+            </button>
+            <button
+              className="secondaryButton"
+              type="button"
+              onClick={() => goToPage("services")}
+            >
               View Services
-            </a>
+            </button>
           </div>
         </div>
 
@@ -571,7 +736,7 @@ function App() {
         </p>
       </section>
 
-      <section className="section white">
+      <section id="process" className="section white">
         <p className="smallTitle">How It Works</p>
         <h2>A simple path for parents</h2>
 

@@ -2301,3 +2301,279 @@ footer p {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ================================
+   Page-style navigation
+   Desktop + mobile menu
+================================ */
+
+.header {
+  gap: 22px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.header button {
+  font-family: inherit;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navMenu button {
+  background: transparent;
+  border: none;
+  color: #55228c;
+  font-weight: 800;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 8px 4px;
+}
+
+.navMenu button:hover,
+.navMenu button.active {
+  color: #2e9b4f;
+}
+
+.primaryButton,
+.secondaryButton,
+.topButton {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.menuButton {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid #eadcf7;
+  background: white;
+  color: #55228c;
+  font-size: 26px;
+  font-weight: 900;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px rgba(84, 42, 122, 0.08);
+}
+
+.mobileMenuBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 18, 30, 0.45);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mobileMenu {
+  width: min(86vw, 390px);
+  height: 100vh;
+  background: #0d1020;
+  color: white;
+  padding: 22px;
+  box-shadow: 20px 0 60px rgba(0, 0, 0, 0.28);
+  overflow-y: auto;
+  animation: slideMenuIn 0.22s ease;
+}
+
+.mobileMenuTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mobileBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobileMenuLogo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: white;
+}
+
+.mobileBrand h3 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.mobileBrand p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #cfd8dc;
+}
+
+.closeMenuButton {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #55228c;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mobileLinks {
+  display: grid;
+  margin-top: 18px;
+}
+
+.mobileLinks button {
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mobileLinks button:hover {
+  color: #c8f0b8;
+}
+
+.mobileMenuContact {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.mobileMenuContact a {
+  display: block;
+  text-align: center;
+  border-radius: 999px;
+  padding: 15px 20px;
+  font-weight: 900;
+}
+
+.mobileMenuContact a:first-child {
+  background: #2e9b4f;
+  color: white;
+}
+
+.mobileMenuContact a:last-child {
+  background: white;
+  color: #55228c;
+}
+
+@keyframes slideMenuIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Only the selected page section is visible */
+.page[data-active-page] .hero,
+.page[data-active-page] .whySection,
+.page[data-active-page] .aboutSection,
+.page[data-active-page] .visionFuture,
+.page[data-active-page] #services,
+.page[data-active-page] #support,
+.page[data-active-page] #approach,
+.page[data-active-page] #process,
+.page[data-active-page] #contact {
+  display: none;
+}
+
+.page[data-active-page="home"] .hero {
+  display: grid;
+}
+
+.page[data-active-page="why"] .whySection {
+  display: block;
+}
+
+.page[data-active-page="about"] .aboutSection {
+  display: block;
+}
+
+.page[data-active-page="vision"] .visionFuture {
+  display: block;
+}
+
+.page[data-active-page="services"] #services {
+  display: block;
+}
+
+.page[data-active-page="support"] #support {
+  display: grid;
+}
+
+.page[data-active-page="approach"] #approach {
+  display: block;
+}
+
+.page[data-active-page="process"] #process {
+  display: block;
+}
+
+.page[data-active-page="contact"] #contact {
+  display: block;
+}
+
+@media (max-width: 1250px) {
+  .navMenu {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .topButton {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+  }
+
+  .menuButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobileMenu {
+    width: 88vw;
+  }
+}
