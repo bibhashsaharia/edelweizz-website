@@ -524,13 +524,14 @@ function App() {
           <p className="tagline">Every Child Blooms Uniquely</p>
 
           <h2>
-            A warm therapy space for every child’s unique developmental journey.
+            Pediatric therapy, early intervention, and child development support in Sarjapur.
           </h2>
 
           <p className="heroPara">
-            Edelweizz Pediatric Therapy Center supports children with speech
-            delay, autism, sensory needs, behavioural challenges, developmental
-            delays, and learning differences.
+            Edelweizz Pediatric Therapy Center in Sarjapur, Bangalore supports
+            children with speech delay, autism spectrum needs, sensory processing
+            challenges, behavioural concerns, developmental delays, and learning
+            differences through child-first therapy and parent partnership.
           </p>
 
           <div className="heroButtons">
@@ -549,19 +550,34 @@ function App() {
               View Services
             </button>
           </div>
+
+          <div className="localTrustStrip" aria-label="Edelweizz parent trust highlights">
+            <div className="localTrustItem">
+              <span>📍</span>
+              <p>Sarjapur • Chembanahalli Road</p>
+            </div>
+            <div className="localTrustItem">
+              <span>🌱</span>
+              <p>Early intervention focus</p>
+            </div>
+            <div className="localTrustItem">
+              <span>🤝</span>
+              <p>Parent-friendly progress updates</p>
+            </div>
+          </div>
         </div>
 
         <div className="heroCard">
-          <h3>Support that feels personal</h3>
+          <h3>Therapy support under one roof</h3>
           <p>
-            We work with children, parents, and therapists to create practical,
-            compassionate, and consistent therapy journeys.
+            A structured, warm, and multidisciplinary space where therapy goals,
+            home practice, and parent communication stay connected.
           </p>
 
           <div className="miniGrid">
             <div>Speech Therapy</div>
             <div>Occupational Therapy</div>
-            <div>Behaviour Therapy</div>
+            <div>Behaviour & ABA</div>
             <div>Special Education</div>
           </div>
         </div>
@@ -636,10 +652,10 @@ function App() {
       <h2>Built with professional care and a parent’s understanding.</h2>
 
       <p>
-        Edelweizz Pediatric Therapy Center was created with a simple belief:
-        every child deserves to be understood before being guided. We support
-        children with developmental, communication, behavioural, sensory, and
-        learning needs through a warm and structured therapy experience.
+        Edelweizz Pediatric Therapy Center in Sarjapur was created with a simple
+        belief: every child deserves to be understood before being guided. We
+        support children with developmental, communication, behavioural, sensory,
+        and learning needs through a warm and structured therapy experience.
       </p>
 
       <p>
@@ -688,23 +704,62 @@ function App() {
         <p className="smallTitle">Our Services</p>
         <h2>Therapy and developmental support under one roof</h2>
 
-        <div className="cards">
+        <div className="cards serviceCards">
           {[
-            "Speech Therapy",
-            "Occupational Therapy",
-            "Behaviour Therapy",
-            "ABA Therapy",
-            "Special Education",
-            "Parent Counselling",
+            {
+              icon: "🗣️",
+              title: "Speech Therapy",
+              text: "Support for speech delay, language development, articulation, social communication, and everyday communication confidence.",
+            },
+            {
+              icon: "✋",
+              title: "Occupational Therapy",
+              text: "Support for sensory processing, motor skills, coordination, handwriting readiness, self-care, and daily living independence.",
+            },
+            {
+              icon: "🌈",
+              title: "Behaviour Therapy",
+              text: "Structured support for emotional regulation, behaviour concerns, attention, transitions, routines, and positive participation.",
+            },
+            {
+              icon: "🧩",
+              title: "ABA Therapy",
+              text: "Goal-based support for communication, learning readiness, social skills, behaviour, and functional independence where appropriate.",
+            },
+            {
+              icon: "📘",
+              title: "Special Education",
+              text: "Learning support for school readiness, attention, academic foundations, individualized learning goals, and classroom participation.",
+            },
+            {
+              icon: "🤝",
+              title: "Parent Counselling",
+              text: "Guidance for parents to understand therapy goals, home practice, routines, progress updates, and next steps with clarity.",
+            },
           ].map((service) => (
-            <div className="card" key={service}>
-              <h3>{service}</h3>
-              <p>
-                Individualized support designed around each child’s needs,
-                strengths, family goals, and therapy plan.
-              </p>
+            <div className="card" key={service.title}>
+              <div className="serviceIcon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
             </div>
           ))}
+        </div>
+
+        <div className="sectionCtaCard">
+          <div>
+            <h3>Not sure which therapy your child needs?</h3>
+            <p>
+              Start with an initial assessment. We will understand your child’s
+              history, strengths, parent concerns, and developmental needs before
+              suggesting the next step.
+            </p>
+          </div>
+          <div className="sectionCtaActions">
+            <button type="button" onClick={() => goToPage("contact")}>
+              Book Assessment
+            </button>
+            <a href="https://wa.me/919886261567">WhatsApp Us</a>
+          </div>
         </div>
       </section>
 
@@ -721,8 +776,8 @@ function App() {
           <div>Speech and communication delays</div>
           <div>Sensory processing challenges</div>
           <div>Attention and behavioural concerns</div>
+          <div>Early intervention and developmental delays</div>
           <div>Learning and school-readiness challenges</div>
-          <div>Developmental delays</div>
         </div>
       </section>
 
@@ -766,9 +821,10 @@ function App() {
           <p className="smallTitle">Our Space</p>
           <h2>A calm, child-friendly therapy environment in Sarjapur.</h2>
           <p>
-            We are preparing Edelweizz as a warm and structured space where
-            children feel safe, parents feel welcomed, and therapy can happen
-            with clarity, dignity, and comfort.
+            We are preparing Edelweizz as a warm and structured therapy space
+            near Sarjapur and Chembanahalli Road where children feel safe,
+            parents feel welcomed, and therapy can happen with clarity, dignity,
+            and comfort.
           </p>
         </div>
 
@@ -870,7 +926,8 @@ function App() {
             <h3>Interested in working with Edelweizz?</h3>
             <p>
               Share your profile with us on WhatsApp. Relevant certification,
-              experience, and child-centered communication will be important.
+              practical pediatric therapy experience, documentation discipline,
+              and child-centered communication will be important.
             </p>
           </div>
 
@@ -894,42 +951,52 @@ function App() {
             {
               question: "Do we need an assessment before therapy starts?",
               answer:
-                "Yes. An initial assessment helps us understand the child’s current strengths, challenges, communication style, sensory needs, behaviour patterns, and parent concerns before planning therapy.",
+                "Yes. An initial assessment helps us understand the child’s strengths, communication style, sensory needs, behaviour patterns, learning needs, history, and parent concerns before therapy goals are planned.",
             },
             {
-              question: "Which therapies will Edelweizz provide?",
+              question: "When should I consider early intervention for my child?",
               answer:
-                "Edelweizz will support children through speech therapy, occupational therapy, behaviour therapy, ABA therapy, special education, parent counselling, and early intervention support where appropriate.",
+                "Parents should consider early intervention when they notice delays in speech, play, eye contact, response to name, social interaction, motor skills, attention, behaviour, or daily routines. Early support can help families act with clarity instead of waiting in confusion.",
             },
             {
-              question: "Do you support children with autism?",
+              question: "Do you provide speech therapy in Sarjapur?",
               answer:
-                "Yes. We support children with autism spectrum needs through structured, respectful, child-centered therapy plans. The focus is on communication, regulation, learning, independence, and family support.",
+                "Yes. Edelweizz supports children with speech delay, language development needs, articulation concerns, communication difficulties, and social communication goals from our Sarjapur center.",
             },
             {
-              question: "Will parents receive progress updates?",
+              question: "Do you provide occupational therapy for sensory and motor needs?",
               answer:
-                "Yes. Parent communication is central to Edelweizz. We believe parents should understand goals, progress, next steps, and simple home-practice activities.",
+                "Yes. Occupational therapy can support children with sensory processing challenges, fine motor skills, gross motor coordination, handwriting readiness, self-care routines, and daily living independence.",
             },
             {
-              question: "Can therapy goals be continued at home?",
+              question: "Do you support children with autism spectrum needs?",
               answer:
-                "Yes. Therapy works best when small, practical activities are continued at home. We guide parents with simple steps that fit into daily routines.",
+                "Yes. We support children with autism spectrum needs through respectful, structured, child-centered therapy plans focused on communication, regulation, learning readiness, independence, and family support.",
+            },
+            {
+              question: "What is the difference between behaviour therapy and ABA therapy?",
+              answer:
+                "Behaviour therapy broadly supports emotional regulation, routines, transitions, attention, and positive participation. ABA therapy uses structured, goal-based methods where appropriate. The right approach depends on the child’s needs and assessment.",
+            },
+            {
+              question: "Will parents receive progress updates and home practice guidance?",
+              answer:
+                "Yes. Parent communication is central to Edelweizz. Parents should understand therapy goals, progress, next steps, and simple home-practice activities that can continue during daily routines.",
             },
             {
               question: "What age group do you support?",
               answer:
-                "We support young children, school-age children, and adolescents based on developmental need. Early intervention support is also part of the Edelweizz vision.",
+                "We support young children, school-age children, and adolescents based on developmental needs. Early intervention, school readiness, communication, learning, behaviour, and independence goals can all be discussed during assessment.",
             },
             {
-              question: "Where is the center located?",
+              question: "Where is Edelweizz Pediatric Therapy Center located?",
               answer:
-                "Edelweizz Pediatric Therapy Center is located opposite Muneshwara Temple, Volagere Kallahalli, Chembanahalli Road, Karnataka 562125.",
+                "Edelweizz Pediatric Therapy Center is located opposite Muneshwara Temple, Volagere Kallahalli, Chembanahalli Road, Karnataka 562125, near Sarjapur, Bangalore.",
             },
             {
               question: "How can I book an assessment?",
               answer:
-                "You can contact us on WhatsApp or call 9886261567. We will guide you on assessment availability, documents to bring, and the next steps.",
+                "You can contact us on WhatsApp or call 9886261567. We will guide you on assessment availability, useful documents to bring, and the next steps for your child.",
             },
           ].map((item) => (
             <details className="faqItem" key={item.question}>
@@ -944,10 +1011,12 @@ function App() {
       <section id="contact" className="contact">
   <div className="contactIntro">
     <p className="smallTitle">Contact Us</p>
-    <h2>Looking for therapy support for your child?</h2>
+    <h2>Looking for pediatric therapy support near Sarjapur?</h2>
     <p>
       Speak to us and book an initial assessment at Edelweizz Pediatric
-      Therapy Center. We will guide you with warmth, clarity, and care.
+      Therapy Center. We support families looking for speech therapy,
+      occupational therapy, behaviour therapy, ABA therapy, special education,
+      and early intervention support near Sarjapur and Chembanahalli Road.
     </p>
 
     <div className="contactButtons">
@@ -1011,6 +1080,7 @@ function App() {
       <footer>
         <h3>Edelweizz Pediatric Therapy Center</h3>
         <p>Every Child Blooms Uniquely</p>
+        <p>Speech Therapy • Occupational Therapy • Behaviour Therapy • Special Education • Early Intervention</p>
       </footer>
     </main>
   );
