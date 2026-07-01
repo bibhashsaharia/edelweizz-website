@@ -1,6 +1,336 @@
+import { useState } from "react";
 import "./App.css";
 import iconLogo from "./assets/icon-logo.png";
+const journeyStages = [
+  {
+    age: "0–3",
+    title: "Early Signals & Parent Guidance",
+    points: [
+      "Developmental observation",
+      "Parent guidance and early routines",
+      "Communication and play foundations",
+      "Sensory comfort and regulation support",
+    ],
+  },
+  {
+    age: "3–6",
+    title: "Early Intervention",
+    points: [
+      "Speech and communication support",
+      "Occupational therapy foundations",
+      "Behaviour and emotional regulation",
+      "Pre-school and social readiness",
+    ],
+  },
+  {
+    age: "6–9",
+    title: "School Readiness",
+    points: [
+      "Classroom participation",
+      "Learning and attention support",
+      "Peer interaction and social confidence",
+      "Daily independence and structured routines",
+    ],
+  },
+  {
+    age: "9–12",
+    title: "Building the Foundation",
+    points: [
+      "Core therapy skills",
+      "Social skills and friendships",
+      "Self-regulation and emotional understanding",
+      "Parent partnership and home programs",
+    ],
+  },
+  {
+    age: "13–15",
+    title: "Discovering Strengths",
+    points: [
+      "Advanced communication",
+      "Academic and learning support",
+      "Independence in daily routines",
+      "Hobbies, sports, and creative interests",
+    ],
+  },
+  {
+    age: "16–18",
+    title: "Preparing for Life",
+    points: [
+      "Vocational guidance",
+      "Life skills and decision-making",
+      "Social independence",
+      "Real-world exposure",
+    ],
+  },
+  {
+    age: "19–22",
+    title: "Stepping Into the World",
+    points: [
+      "Higher education or skill training",
+      "Workplace readiness",
+      "Independent living skills",
+      "Financial literacy",
+    ],
+  },
+  {
+    age: "23–30",
+    title: "Building a Life",
+    points: [
+      "Meaningful employment",
+      "Healthy relationships",
+      "Managing responsibilities",
+      "Community participation",
+    ],
+  },
+  {
+    age: "30+",
+    title: "Living With Purpose",
+    points: [
+      "Financial independence",
+      "Long-term wellness",
+      "Giving back to others",
+      "Living with dignity and joy",
+    ],
+  },
+];
 
+const visionPillars = [
+  {
+    icon: "🌱",
+    title: "Child at the Centre",
+    text: "Every decision starts with the child’s well-being, strengths, pace, and comfort.",
+  },
+  {
+    icon: "🤝",
+    title: "Family Empowerment",
+    text: "We walk beside families as partners with clarity, support, and trust.",
+  },
+  {
+    icon: "🧠",
+    title: "Holistic & Inclusive",
+    text: "We care for communication, behaviour, learning, emotions, and daily life.",
+  },
+  {
+    icon: "📘",
+    title: "Quality & Evidence",
+    text: "Therapy is guided by professional assessment, evidence, and practical outcomes.",
+  },
+  {
+    icon: "🛡️",
+    title: "Integrity & Transparency",
+    text: "Parents deserve honest communication and progress they can understand.",
+  },
+  {
+    icon: "💡",
+    title: "Innovation for Impact",
+    text: "We will use systems, tools, and technology to improve care and accessibility.",
+  },
+];
+
+function VisionSection() {
+  const [activeView, setActiveView] = useState("journey");
+  const [activeStage, setActiveStage] = useState(0);
+
+  const stageIcons = ["👶", "🌱", "🎒", "🧩", "💡", "🧭", "🚀", "💼", "🌄"];
+
+  const stageFocus = [
+    "The earliest years are about noticing developmental signals early, guiding parents, and building comfort, communication, play, and regulation.",
+    "Early intervention builds the child’s foundation through speech, occupational therapy, behaviour support, play skills, and family routines.",
+    "School readiness focuses on communication, attention, peer interaction, learning confidence, and daily independence.",
+    "Strong foundations continue with therapy, regulation, routines, social skills, and parent partnership.",
+    "Confidence grows through communication, academics, hobbies, and independence.",
+    "Teen years become a launchpad for life skills, choices, and real-world readiness.",
+    "Young adults step outward into education, work skills, independent living, and community.",
+    "Adulthood becomes about meaningful work, healthy living, responsibility, and belonging.",
+    "A future of dignity, purpose, contribution, and joyful lifelong growth.",
+  ];
+
+  const lifeSkillTags = [
+    "Communication",
+    "Independence",
+    "Money Management",
+    "Time Management",
+    "Problem Solving",
+    "Self Care",
+    "Digital Literacy",
+    "Safety Awareness",
+    "Decision Making",
+  ];
+
+  const ecosystemNodes = [
+    {
+      icon: "👨‍👩‍👦",
+      title: "Families",
+      text: "Empowered, informed, and supported every step of the journey.",
+    },
+    {
+      icon: "🧑‍⚕️",
+      title: "Therapists",
+      text: "Expertise with empathy, clarity, and evidence-based practice.",
+    },
+    {
+      icon: "🏫",
+      title: "Schools",
+      text: "Stronger bridges between therapy, classrooms, and inclusion.",
+    },
+    {
+      icon: "🏥",
+      title: "Healthcare",
+      text: "Meaningful collaboration with doctors and care partners.",
+    },
+    {
+      icon: "🏛️",
+      title: "Community",
+      text: "Policy, NGOs, and social systems that support belonging.",
+    },
+    {
+      icon: "💻",
+      title: "Technology",
+      text: "Smarter systems that improve access, coordination, and outcomes.",
+    },
+  ];
+
+  const impactPoints = [
+    "Every child makes measurable progress",
+    "Families feel supported and empowered",
+    "Therapists thrive in a purpose-led environment",
+    "Communities become more inclusive",
+  ];
+
+  return (
+    <section id="vision" className="visionFuture">
+      <div className="visionGridOverlay" />
+      <div className="visionGlow glowOne" />
+      <div className="visionGlow glowTwo" />
+
+      <div className="visionShell">
+        <div className="visionTop">
+          <p className="smallTitle smallTitleLight">Our Vision</p>
+          <h2>A future where every child blooms uniquely.</h2>
+          <p>
+            We are building more than a therapy center. We are building a future
+            where each child grows with confidence, independence, inclusion, and
+            purpose — supported by families, professionals, and a stronger care
+            ecosystem.
+          </p>
+        </div>
+
+        <div className="futureSwitch">
+          <button
+            className={activeView === "journey" ? "active" : ""}
+            onClick={() => setActiveView("journey")}
+          >
+            Child Journey
+          </button>
+
+          <button
+            className={activeView === "ecosystem" ? "active" : ""}
+            onClick={() => setActiveView("ecosystem")}
+          >
+            Edelweizz Ecosystem
+          </button>
+        </div>
+
+        {activeView === "journey" && (
+          <div className="journeyUniverse">
+            <div className="journeyRail">
+              {journeyStages.map((stage, index) => (
+                <button
+                  key={stage.age}
+                  className={activeStage === index ? "active" : ""}
+                  onClick={() => setActiveStage(index)}
+                >
+                  <div className="railIcon">{stageIcons[index]}</div>
+                  <span>{stage.age}</span>
+                  <small>{stage.title}</small>
+                </button>
+              ))}
+            </div>
+
+            <div className="journeySpotlight">
+              <div className="spotlightGraphic">
+                <div className="graphicRing ringOuter" />
+                <div className="graphicRing ringMiddle" />
+                <div className="graphicCore">
+                  <div className="coreIcon">{stageIcons[activeStage]}</div>
+                  <div className="coreAge">{journeyStages[activeStage].age}</div>
+                </div>
+              </div>
+
+              <div className="spotlightContent">
+                <div className="spotlightBadge">Journey Spotlight</div>
+                <h3>{journeyStages[activeStage].title}</h3>
+                <p className="spotlightLead">{stageFocus[activeStage]}</p>
+
+                <ul className="spotlightList">
+                  {journeyStages[activeStage].points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="lifeSkillsFuture">
+              <div className="lifeSkillsHeader">
+                <h3>Life skills we will nurture</h3>
+                <p>
+                  Practical skills that help children move toward confidence,
+                  independence, and real-life readiness.
+                </p>
+              </div>
+
+              <div className="futureSkillCloud">
+                {lifeSkillTags.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeView === "ecosystem" && (
+          <div className="ecosystemUniverse">
+            <div className="ecosystemOrbit">
+              <div className="visionCore">
+                <div className="visionCoreInner">
+                  <span className="coreMini">Vision Core</span>
+                  <h3>Edelweizz</h3>
+                  <p>
+                    Child-first care, family empowerment, evidence, inclusion,
+                    and meaningful long-term impact.
+                  </p>
+                </div>
+              </div>
+
+              {ecosystemNodes.map((node, index) => (
+                <div
+                  key={node.title}
+                  className={`orbitNode orbitNode${index + 1}`}
+                >
+                  <div className="orbitNodeIcon">{node.icon}</div>
+                  <h4>{node.title}</h4>
+                  <p>{node.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="impactRibbon">
+              <h3>What this creates</h3>
+              <div className="impactGrid">
+                {impactPoints.map((item) => (
+                  <div className="impactCard" key={item}>
+                    <span>✦</span>
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
 function App() {
   return (
     <main id="top" className="page">
@@ -20,6 +350,7 @@ function App() {
         <nav className="navMenu">
         <a href="#why-edelweizz">Why Edelweizz</a>
         <a href="#about">About</a>
+        <a href="#vision">Vision</a>
           <a href="#services">Services</a>
           <a href="#support">Who We Support</a>
           <a href="#approach">Approach</a>
@@ -187,6 +518,7 @@ function App() {
     </div>
   </div>
 </section>
+<VisionSection />
       <section id="services" className="section white">
         <p className="smallTitle">Our Services</p>
         <h2>Therapy and developmental support under one roof</h2>
