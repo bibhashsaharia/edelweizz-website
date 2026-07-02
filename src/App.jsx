@@ -530,14 +530,15 @@ function App() {
           <p className="tagline">Every Child Blooms Uniquely</p>
 
           <h2>
-            Pediatric therapy, early intervention, and child development support in Sarjapur.
+            A warm therapy space where every child is understood first.
           </h2>
 
           <p className="heroPara">
-            Edelweizz Pediatric Therapy Center in Sarjapur, Bangalore supports
-            children with speech delay, autism spectrum needs, sensory processing
-            challenges, behavioural concerns, developmental delays, and learning
-            differences through child-first therapy and parent partnership.
+            At Edelweizz Pediatric Therapy Center, we support children with
+            communication, sensory, behaviour, learning, and developmental needs
+            through thoughtful therapy and close parent partnership. Every plan
+            is built around the child’s strengths, comfort, pace, and real-life
+            goals.
           </p>
 
           <div className="heroButtons">
@@ -564,7 +565,7 @@ function App() {
             </div>
             <div className="localTrustItem">
               <span>🌱</span>
-              <p>Early intervention focus</p>
+              <p>Early support with clarity</p>
             </div>
             <div className="localTrustItem">
               <span>🤝</span>
@@ -715,32 +716,32 @@ function App() {
             {
               icon: "🗣️",
               title: "Speech Therapy",
-              text: "Support for speech delay, language development, articulation, social communication, and everyday communication confidence.",
+              text: "Support for communication, language development, speech clarity, social communication, and everyday confidence.",
             },
             {
               icon: "✋",
               title: "Occupational Therapy",
-              text: "Support for sensory processing, motor skills, coordination, handwriting readiness, self-care, and daily living independence.",
+              text: "Support for sensory comfort, motor skills, coordination, handwriting readiness, self-care, and daily independence.",
             },
             {
               icon: "🌈",
               title: "Behaviour Therapy",
-              text: "Structured support for emotional regulation, behaviour concerns, attention, transitions, routines, and positive participation.",
+              text: "Warm, structured support for regulation, attention, routines, transitions, participation, and everyday behaviour goals.",
             },
             {
               icon: "🧩",
               title: "ABA Therapy",
-              text: "Goal-based support for communication, learning readiness, social skills, behaviour, and functional independence where appropriate.",
+              text: "Goal-based support for communication, learning readiness, social skills, daily routines, and independence where appropriate.",
             },
             {
               icon: "📘",
               title: "Special Education",
-              text: "Learning support for school readiness, attention, academic foundations, individualized learning goals, and classroom participation.",
+              text: "Support for school readiness, attention, learning foundations, individualized goals, and classroom participation.",
             },
             {
               icon: "🤝",
               title: "Parent Counselling",
-              text: "Guidance for parents to understand therapy goals, home practice, routines, progress updates, and next steps with clarity.",
+              text: "Guidance that helps parents understand therapy goals, home practice, routines, progress, and next steps with clarity.",
             },
           ].map((service) => (
             <div className="card" key={service.title}>
@@ -778,12 +779,12 @@ function App() {
         </div>
 
         <div className="supportList">
-          <div>Autism spectrum support</div>
-          <div>Speech and communication delays</div>
-          <div>Sensory processing challenges</div>
-          <div>Attention and behavioural concerns</div>
+          <div>Autism and neurodevelopmental support</div>
+          <div>Speech, language, and communication needs</div>
+          <div>Sensory regulation and motor needs</div>
+          <div>Attention, routines, and behaviour support</div>
           <div>Early intervention and developmental delays</div>
-          <div>Learning and school-readiness challenges</div>
+          <div>Learning and school-readiness support</div>
         </div>
       </section>
 
@@ -957,32 +958,32 @@ function App() {
             {
               question: "Do we need an assessment before therapy starts?",
               answer:
-                "Yes. An initial assessment helps us understand the child’s strengths, communication style, sensory needs, behaviour patterns, learning needs, history, and parent concerns before therapy goals are planned.",
+                "Yes. An initial assessment helps us understand the child’s strengths, communication style, sensory comfort, learning needs, routines, history, and parent concerns before therapy goals are planned.",
             },
             {
               question: "When should I consider early intervention for my child?",
               answer:
-                "Parents should consider early intervention when they notice delays in speech, play, eye contact, response to name, social interaction, motor skills, attention, behaviour, or daily routines. Early support can help families act with clarity instead of waiting in confusion.",
+                "Parents can consider early intervention when they notice concerns around speech, play, response to name, interaction, motor skills, attention, regulation, behaviour, or daily routines. Early support helps families move with clarity instead of waiting in confusion.",
             },
             {
               question: "Do you provide speech therapy in Sarjapur?",
               answer:
-                "Yes. Edelweizz supports children with speech delay, language development needs, articulation concerns, communication difficulties, and social communication goals from our Sarjapur center.",
+                "Yes. Edelweizz supports children with speech, language, communication, clarity of expression, and social communication goals from our Sarjapur center.",
             },
             {
               question: "Do you provide occupational therapy for sensory and motor needs?",
               answer:
-                "Yes. Occupational therapy can support children with sensory processing challenges, fine motor skills, gross motor coordination, handwriting readiness, self-care routines, and daily living independence.",
+                "Yes. Occupational therapy can support children with sensory comfort, regulation, fine motor skills, gross motor coordination, handwriting readiness, self-care routines, and daily independence.",
             },
             {
-              question: "Do you support children with autism spectrum needs?",
+              question: "Do you support children with autism and neurodevelopmental needs?",
               answer:
-                "Yes. We support children with autism spectrum needs through respectful, structured, child-centered therapy plans focused on communication, regulation, learning readiness, independence, and family support.",
+                "Yes. We support children with autism and neurodevelopmental needs through respectful, structured, child-centered therapy plans focused on communication, regulation, learning readiness, independence, and family support.",
             },
             {
               question: "What is the difference between behaviour therapy and ABA therapy?",
               answer:
-                "Behaviour therapy broadly supports emotional regulation, routines, transitions, attention, and positive participation. ABA therapy uses structured, goal-based methods where appropriate. The right approach depends on the child’s needs and assessment.",
+                "Behaviour support focuses on regulation, routines, transitions, attention, participation, and practical everyday goals. ABA-informed methods may be used where appropriate. The right approach depends on the child’s needs and assessment.",
             },
             {
               question: "Will parents receive progress updates and home practice guidance?",
@@ -1017,12 +1018,12 @@ function App() {
       <section id="contact" className="contact">
   <div className="contactIntro">
     <p className="smallTitle">Contact Us</p>
-    <h2>Looking for pediatric therapy support near Sarjapur?</h2>
+    <h2>Let’s understand your child’s needs together.</h2>
     <p>
-      Speak to us and book an initial assessment at Edelweizz Pediatric
-      Therapy Center. We support families looking for speech therapy,
-      occupational therapy, behaviour therapy, ABA therapy, special education,
-      and early intervention support near Sarjapur and Chembanahalli Road.
+      Speak to us to book an initial assessment or discuss the right next step
+      for your child. Edelweizz supports families with speech therapy,
+      occupational therapy, behaviour support, special education, early
+      intervention, and parent guidance in Sarjapur.
     </p>
 
     <div className="contactButtons">
