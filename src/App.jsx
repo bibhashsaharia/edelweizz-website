@@ -513,6 +513,12 @@ function App() {
                 <a href="tel:+919886261567" onClick={closeMenu}>
                   Call 9886261567
                 </a>
+                <button type="button" onClick={() => goToPage("terms")}>
+                  Terms & Conditions
+                </button>
+                <button type="button" onClick={() => goToPage("privacy")}>
+                  Privacy Policy
+                </button>
               </div>
             </aside>
           </div>
@@ -1030,11 +1036,33 @@ function App() {
     </div>
   </div>
 
-  <div className="contactGrid">
+  <div className="contactGrid contactGridExpanded">
     <div className="contactBox">
       <h3>Phone</h3>
       <p>9886261567</p>
       <p>9886264796</p>
+    </div>
+
+    <div className="contactBox">
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:Edelweizzcenter@gmail.com">
+          Edelweizzcenter@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <div className="contactBox">
+      <h3>LinkedIn</h3>
+      <p>
+        <a
+          href="https://www.linkedin.com/company/edwlweizz-pediatric-therapy-center"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Follow Edelweizz on LinkedIn
+        </a>
+      </p>
     </div>
 
     <div className="contactBox">
@@ -1077,10 +1105,174 @@ function App() {
   </div>
 </section>
 
+
+      <section id="terms" className="legalSection">
+        <div className="legalShell">
+          <p className="smallTitle">Terms & Conditions</p>
+          <h2>Terms and Conditions</h2>
+          <p className="legalUpdated">Last updated: July 2026</p>
+
+          <div className="legalNotice">
+            <strong>Important:</strong> These terms are written for the Edelweizz website and appointment enquiries. They do not replace clinical advice, emergency care, or a formal agreement signed with the center.
+          </div>
+
+          <div className="legalCard">
+            <h3>1. About Edelweizz</h3>
+            <p>
+              Edelweizz Pediatric Therapy Center provides pediatric therapy and developmental support services including speech therapy, occupational therapy, behaviour therapy, ABA-informed support, special education, early intervention, parent guidance, and related child-development support.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>2. Use of this website</h3>
+            <p>
+              The information on this website is for general awareness and parent guidance. It should not be treated as a diagnosis, medical prescription, emergency service, or replacement for an in-person professional assessment.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>3. Appointments and assessments</h3>
+            <p>
+              Appointments, assessments, therapy plans, session availability, fees, and schedules are subject to confirmation by Edelweizz. A therapy plan is created only after understanding the child’s needs, history, parent concerns, and professional observations.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>4. Parent and caregiver responsibility</h3>
+            <p>
+              Parents or caregivers are responsible for sharing accurate information about the child’s developmental history, medical background, school concerns, previous reports, allergies, behavioural concerns, and any other relevant details that may affect therapy planning or child safety.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>5. Therapy outcomes</h3>
+            <p>
+              Every child’s progress is different. Edelweizz aims to provide structured, respectful, child-centered support, but does not guarantee a specific outcome, timeline, school placement, diagnosis change, or developmental result.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>6. Payments, cancellation, and rescheduling</h3>
+            <p>
+              Fees, payment terms, cancellation rules, refunds, and rescheduling policies may be communicated separately at the time of assessment or admission. Parents are requested to confirm these details directly with the center before starting services.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>7. Intellectual property</h3>
+            <p>
+              The Edelweizz name, logo, website content, designs, therapy materials created by the center, and brand assets belong to Edelweizz Pediatric Therapy Center unless otherwise stated. They may not be copied, reused, or distributed without written permission.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>8. Contact</h3>
+            <p>
+              For questions about these terms, contact us at <a href="mailto:Edelweizzcenter@gmail.com">Edelweizzcenter@gmail.com</a> or call 9886261567.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" className="legalSection">
+        <div className="legalShell">
+          <p className="smallTitle">Privacy Policy</p>
+          <h2>Privacy Policy</h2>
+          <p className="legalUpdated">Last updated: July 2026</p>
+
+          <div className="legalNotice">
+            We respect the privacy of children and families. This policy explains how Edelweizz may collect and use information shared through the website, phone, WhatsApp, email, assessments, and center interactions.
+          </div>
+
+          <div className="legalCard">
+            <h3>1. Information we may collect</h3>
+            <p>
+              We may collect parent or caregiver name, phone number, email address, child’s name and age, appointment details, developmental concerns, previous reports shared by parents, school or therapy history, and information needed to plan assessments or therapy support.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>2. How we use information</h3>
+            <p>
+              Information may be used to respond to enquiries, book appointments, plan assessments, prepare therapy goals, communicate with parents, coordinate sessions, maintain records, improve services, and support child safety and continuity of care.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>3. Child-related information</h3>
+            <p>
+              Child-related information is treated with care and shared internally only with relevant professionals involved in assessment, therapy planning, documentation, supervision, or center operations. We request parents not to share sensitive information unless it is needed for assessment or therapy support.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>4. Sharing of information</h3>
+            <p>
+              Edelweizz does not sell personal information. Information may be shared only with consent, with relevant care professionals involved in the child’s support, with service providers who help us operate the center or website, or where required by applicable law, safety concerns, or regulatory requirements.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>5. WhatsApp, phone, and email communication</h3>
+            <p>
+              When parents contact us by WhatsApp, phone, or email, the communication may include personal or child-related information. Parents should use these channels thoughtfully and avoid sending unnecessary sensitive documents unless requested by the center.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>6. Website data</h3>
+            <p>
+              Our website may collect basic technical information such as browser type, device information, general usage patterns, and pages visited if analytics or hosting tools are enabled. This helps us improve the website and understand parent needs better.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>7. Data protection and retention</h3>
+            <p>
+              We take reasonable steps to protect information shared with us. Records may be retained for service continuity, clinical documentation, legal, operational, or administrative purposes. Parents may contact us to ask about correction or deletion requests, subject to applicable requirements and professional record-keeping needs.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>8. Photos and testimonials</h3>
+            <p>
+              We will seek parent or guardian permission before using identifiable child photos, videos, testimonials, or progress stories for marketing or public communication.
+            </p>
+          </div>
+
+          <div className="legalCard">
+            <h3>9. Contact for privacy questions</h3>
+            <p>
+              For privacy-related questions, corrections, or requests, contact us at <a href="mailto:Edelweizzcenter@gmail.com">Edelweizzcenter@gmail.com</a> or call 9886261567.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <h3>Edelweizz Pediatric Therapy Center</h3>
         <p>Every Child Blooms Uniquely</p>
-        <p>Speech Therapy • Occupational Therapy • Behaviour Therapy • Special Education • Early Intervention</p>
+        <p>
+          Speech Therapy • Occupational Therapy • Behaviour Therapy • Special Education • Early Intervention
+        </p>
+        <p>
+          Email: <a href="mailto:Edelweizzcenter@gmail.com">Edelweizzcenter@gmail.com</a> •
+          <a
+            href="https://www.linkedin.com/company/edwlweizz-pediatric-therapy-center"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </p>
+        <div className="footerLegalLinks">
+          <button type="button" onClick={() => goToPage("terms")}>
+            Terms & Conditions
+          </button>
+          <button type="button" onClick={() => goToPage("privacy")}>
+            Privacy Policy
+          </button>
+        </div>
       </footer>
     </main>
   );
