@@ -1,8 +1,8 @@
 # Edelweizz India website
 
-Warm, parent-focused redesign with the existing Edelweizz identity and actual centre photography.
+Production website for Edelweizz Pediatric Therapy Center, Sarjapur–Chembanahalli, Bengaluru.
 
-## Develop and build
+## Build
 
 ```sh
 npm ci
@@ -11,20 +11,63 @@ npm run build
 npm run preview
 ```
 
-The existing Vite build continues to produce `dist`. The redesigned entry uses `index.html`, `src/site.js` and `src/site.css`; the previous React entry is retained for reference but is not loaded. Images and self-hosted fonts are in `public/assets`, including font licences.
+The site is built with Vite. The production entry uses `index.html`, `src/site.js` and `src/site.css`. Shared public assets live in `public/assets`. Dedicated service and parent-answer pages live under `public/<slug>/index.html` so they publish as crawlable URLs.
 
-## Parent experience
+## Production goals
 
-Seven service summaries and category filters; service-detail dialogs; a four-step child journey; photographs that open at full size; team information; FAQs; centre hours and contact details; policy dialogs. The enquiry builder prepares a WhatsApp message locally and lets the parent review it before opening WhatsApp. It does not submit or store an enquiry.
+1. Convert parent enquiries with clear service information, real centre photography, visible contact details and low-friction WhatsApp contact.
+2. Rank for non-brand local-intent searches such as speech therapy, occupational therapy, behaviour/ABA support, special education, early intervention and developmental assessment around Sarjapur.
+3. Build strong machine-readable entity signals for Google and AI discovery through consistent NAP data, structured data, dedicated URLs, internal links and useful parent-answer content.
+4. Keep copy factual and parent-focused. No keyword stuffing or generic SEO filler.
 
-## Review status
+## Site architecture
 
-Private review: https://edelweizz-india-review.bibhash-saharia.chatgpt.site
+- `/` — conversion hub / centre overview
+- `/speech-therapy-sarjapur/`
+- `/occupational-therapy-sarjapur/`
+- `/behaviour-aba-therapy-sarjapur/`
+- `/special-education-sarjapur/`
+- `/early-intervention-sarjapur/`
+- `/developmental-assessment-sarjapur/`
+- `/parent-questions/`
 
-This branch is a draft for review. Do not merge, publish publicly, change domain bindings or replace edelweizzindia.com without the owner's approval. The commit uses `[CF-Pages-Skip]` to omit automatic Cloudflare Pages deployment. Keep that prefix on review commits. The private Sites project remains separate from this public source repository.
+The homepage remains the main brand and conversion page. Dedicated pages carry deeper service intent and parent questions.
 
-Before an approved public launch, remove the review-only `noindex, nofollow` meta tag, remove the `Disallow: /` robots rule, change the policy heading from private review to website, and confirm current team, service availability, contact details and policies with the owner. The approved release must use a new commit without the skip prefix.
+## Current release work
 
-## Validation
+Completed on this branch:
+- redesigned homepage with real centre photography
+- current centre hours, address and contact details
+- service overview, child journey, team information and parent FAQ
+- LocalBusiness structured data foundation
+- public crawl rule in `robots.txt`
+- shared styling for dedicated service pages
+- first dedicated page: `/speech-therapy-sarjapur/`
 
-Vite production build and JavaScript syntax are checked when preparing this branch. The private redesign's earlier DOM checks covered service filters and dialogs, journey controls, enquiry preview/edit, policies and responsive rules. Those are not a substitute for visual device testing; rendered desktop and mobile QA remain review limitations in this environment.
+Before merge to `main`:
+- add the remaining dedicated service / assessment / parent-question pages
+- link dedicated pages from the homepage
+- remove review-only `noindex` and private-review language
+- add/update `sitemap.xml`
+- validate internal links, canonical URLs, structured data and build output
+- review current team/service/contact facts
+
+After merge:
+- verify the public domain serves the new build
+- verify `robots.txt`, sitemap, canonicals, page titles and structured data on the live site
+- test priority parent/search queries and record whether Edelweizz appears
+- use the results to decide the next content and authority-building actions
+
+## Discovery measurement
+
+Track a fixed query set rather than relying on impressions. Example groups:
+- speech therapy Sarjapur
+- occupational therapy Sarjapur
+- ABA / behaviour therapy Sarjapur
+- special education Sarjapur
+- early intervention Sarjapur
+- developmental assessment Sarjapur
+- child development centre Sarjapur
+- realistic parent questions about delayed speech, sensory concerns, behaviour, school readiness and developmental support
+
+Record branded visibility, non-brand visibility, referring/cited sources and competitors appearing instead of Edelweizz.
