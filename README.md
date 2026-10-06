@@ -23,6 +23,7 @@ The site is built with Vite. The production entry uses `index.html`, `src/site.j
 ## Site architecture
 
 - `/` — conversion hub / centre overview
+- `/services/` — service hub
 - `/speech-therapy-sarjapur/`
 - `/occupational-therapy-sarjapur/`
 - `/behaviour-aba-therapy-sarjapur/`
@@ -33,30 +34,35 @@ The site is built with Vite. The production entry uses `index.html`, `src/site.j
 
 The homepage remains the main brand and conversion page. Dedicated pages carry deeper service intent and parent questions.
 
-## Current release work
+## Release state
 
-Completed on this branch:
+Completed on the release branch:
 - redesigned homepage with real centre photography
 - current centre hours, address and contact details
 - service overview, child journey, team information and parent FAQ
 - LocalBusiness structured data foundation
-- public crawl rule in `robots.txt`
-- shared styling for dedicated service pages
-- first dedicated page: `/speech-therapy-sarjapur/`
+- dedicated crawlable pages for Speech, OT, Behaviour/ABA, Special Education, Early Intervention and Developmental Assessment
+- Services hub and Parent Questions hub
+- shared styling for all dedicated pages
+- production `robots.txt` with crawl allowed
+- `sitemap.xml` covering the homepage, service hub, dedicated service pages and parent-question hub
+- Vite production transform that removes the review `noindex`, applies the production title/description, links the homepage to the service and parent-question hubs, and removes private-review wording from deployed JavaScript
+
+## Release checklist
 
 Before merge to `main`:
-- add the remaining dedicated service / assessment / parent-question pages
-- link dedicated pages from the homepage
-- remove review-only `noindex` and private-review language
-- add/update `sitemap.xml`
-- validate internal links, canonical URLs, structured data and build output
-- review current team/service/contact facts
+- verify PR is mergeable
+- verify current team/service/contact facts
+- mark the PR ready for review
+- merge to `main`
 
 After merge:
-- verify the public domain serves the new build
-- verify `robots.txt`, sitemap, canonicals, page titles and structured data on the live site
+- verify the public domain serves the redesigned homepage
+- verify `/robots.txt` and `/sitemap.xml`
+- verify all dedicated page URLs load publicly
+- verify the live homepage is `index, follow` and no longer contains opening-soon/review copy
+- verify canonicals, page titles, structured data and key internal links
 - test priority parent/search queries and record whether Edelweizz appears
-- use the results to decide the next content and authority-building actions
 
 ## Discovery measurement
 
