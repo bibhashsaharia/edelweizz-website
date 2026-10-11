@@ -24,4 +24,12 @@ const productionRelease = {
 
 export default defineConfig({
   plugins: [react(), productionRelease],
+  build: {
+    rollupOptions: {
+      input: {
+        website: 'index.html',
+        growth: 'growth-os.html',
+      },
+    },
+  },
 })
