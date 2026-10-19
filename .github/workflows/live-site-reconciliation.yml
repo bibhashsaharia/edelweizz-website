@@ -1,0 +1,41 @@
+name: Read-only live site reconciliation
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/live-site-reconciliation.yml'
+      - 'scripts/reconcile-live-site.mjs'
+      - 'docs/reconciliation/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Build the repository version locally
+        run: npm run build
+      - name: Compare publicly deployed pages (GET only, no credentials)
+        run: node scripts/reconcile-live-site.mjs
+      - name: Publish sanitized reconciliation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: edelweizz-live-reconciliation
+          path: reconciliation-report.md
+          if-no-files-found: warn
+      - name: Add reconciliation report to run summary
+        if: always()
+        run: |
+          if [ -f reconciliation-report.md ]; then
+            cat reconciliation-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
