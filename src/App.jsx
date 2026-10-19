@@ -94,39 +94,6 @@ const journeyStages = [
   },
 ];
 
-const visionPillars = [
-  {
-    icon: "🌱",
-    title: "Child at the Centre",
-    text: "Every decision starts with the child’s well-being, strengths, pace, and comfort.",
-  },
-  {
-    icon: "🤝",
-    title: "Family Empowerment",
-    text: "We walk beside families as partners with clarity, support, and trust.",
-  },
-  {
-    icon: "🧠",
-    title: "Holistic & Inclusive",
-    text: "We care for communication, behaviour, learning, emotions, and daily life.",
-  },
-  {
-    icon: "📘",
-    title: "Quality & Evidence",
-    text: "Therapy is guided by professional assessment, evidence, and practical outcomes.",
-  },
-  {
-    icon: "🛡️",
-    title: "Integrity & Transparency",
-    text: "Parents deserve honest communication and progress they can understand.",
-  },
-  {
-    icon: "💡",
-    title: "Innovation for Impact",
-    text: "We will use systems, tools, and technology to improve care and accessibility.",
-  },
-];
-
 function VisionSection() {
   const [activeView, setActiveView] = useState("journey");
   const [activeStage, setActiveStage] = useState(0);
