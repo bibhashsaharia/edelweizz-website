@@ -1,4 +1,5 @@
-import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
+import { Buffer } from 'node:buffer';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 
@@ -27,7 +28,6 @@ const report = [
 ];
 const differences = [];
 const localRoot = path.resolve('dist');
-const localAssetsRoot = path.join(localRoot, 'assets');
 function sha(data) { return createHash('sha256').update(data).digest('hex'); }
 function cleanText(data) {
   return String(data)
