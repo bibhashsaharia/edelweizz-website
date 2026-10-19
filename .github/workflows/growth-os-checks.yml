@@ -1,0 +1,43 @@
+name: Growth OS safety and build checks
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/growth-os-checks.yml'
+      - 'src/growth/**'
+      - 'docs/growth-os/**'
+      - 'growth-os.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vite.config.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out proposed code (not production)
+        uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run truthful-metrics unit tests
+        run: npm test
+      - name: Static analysis
+        run: npm run lint
+      - name: Build website and private dashboard
+        run: npm run build
+      - name: Ensure both entrypoints were built
+        run: |
+          test -s dist/index.html
+          test -s dist/growth-os.html
+      - name: Report that this workflow never deploys
+        run: echo "Build checked only. Production remains unchanged."

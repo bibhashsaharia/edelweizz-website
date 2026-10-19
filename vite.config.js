@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react'
 const productionRelease = {
   name: 'edelweizz-production-release',
   transformIndexHtml(html) {
+    if (html.includes('<title>Edelweizz Growth OS</title>')) return html
+
     return html
       .replace('<meta name="robots" content="noindex, nofollow">', '<meta name="robots" content="index, follow">')
       .replace('<title>Edelweizz India | Every Child Blooms Uniquely</title>', '<title>Edelweizz Pediatric Therapy Center | Sarjapur, Bengaluru</title>')
@@ -24,4 +26,12 @@ const productionRelease = {
 
 export default defineConfig({
   plugins: [react(), productionRelease],
+  build: {
+    rollupOptions: {
+      input: {
+        website: 'index.html',
+        growth: 'growth-os.html',
+      },
+    },
+  },
 })
