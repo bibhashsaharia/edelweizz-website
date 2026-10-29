@@ -1,0 +1,86 @@
+{
+  "source_commit": "715ea06d2864728b5343cf8f1f2927c2b7c3af13",
+  "baseline_commit": "18d3a02719345b398b3be20b691124eb12c05263",
+  "files": [
+    {
+      "path": "app/api/optimizer/actions/route.ts",
+      "sha256": "c52601defab3d5b3cf6ab341864f866a386dcbc376c1d814ef4abe81ce4c09d5",
+      "bytes": 67
+    },
+    {
+      "path": "app/api/optimizer/import/route.ts",
+      "sha256": "4f6a3a79a352d7843c01675d535decf519b3a2d46c3bd7d61cbd179d6b8323e5",
+      "bytes": 67
+    },
+    {
+      "path": "app/api/optimizer/ingest/route.ts",
+      "sha256": "300689b6465f8a832c10790b504ebff2c5136b7d19d4dd37e274da1d26be6a95",
+      "bytes": 67
+    },
+    {
+      "path": "app/api/optimizer/key/route.ts",
+      "sha256": "f329c52cabc852ad78ae9fd32f7ed46c839c685628a41f0be2e27da38f8d927f",
+      "bytes": 64
+    },
+    {
+      "path": "app/api/optimizer/route.ts",
+      "sha256": "7602b32a25b8337daaf5c91e2d7a008ba50d2807d3ea7170db044b5917ecc654",
+      "bytes": 101
+    },
+    {
+      "path": "app/optimizer/route.ts",
+      "sha256": "d3ae6faf402a404bf2549b32a062da9b100b87e8a85a78d8de0db51e4130fe45",
+      "bytes": 729
+    },
+    {
+      "path": "docs/GROWTH-OPTIMIZER.md",
+      "sha256": "31d033f4f57e10d95c4c455b69229fcf2b4b64246bca84abb0a23caad60ef3dc",
+      "bytes": 5306
+    },
+    {
+      "path": "lib/optimizer-core.ts",
+      "sha256": "b4b782d62127359365a1c089cde59b6c0f35812e428b98e6fda249919826cabd",
+      "bytes": 8836
+    },
+    {
+      "path": "lib/optimizer.ts",
+      "sha256": "7f08d90524e3020a2cc2a6d7dbd446335d0abf2ae7259fbd1a96551f33f6c03f",
+      "bytes": 17534
+    },
+    {
+      "path": "public/optimizer-appsscript.json",
+      "sha256": "3c1b633497fe886ff33adff5c9c333567fe4dd28448cb3e724435884fc1d6805",
+      "bytes": 297
+    },
+    {
+      "path": "public/optimizer-setup.md",
+      "sha256": "22426c4ba8af73466e22033c230d9dd4779f79cab06b425a2012a03ed4016a90",
+      "bytes": 4785
+    },
+    {
+      "path": "public/optimizer-sync.gs",
+      "sha256": "2861eec863564e089219a09bc95788d36cfdeeb4e41b352c36ffa91dfcb4f0f6",
+      "bytes": 5675
+    },
+    {
+      "path": "public/optimizer.css",
+      "sha256": "09def16e85ca3b67c4244fd61b13259a3800ed8192f148aeeff9763632e3dff6",
+      "bytes": 3195
+    },
+    {
+      "path": "public/optimizer.js",
+      "sha256": "84754e02f0f0131422577a6038f839b0d9b97b33f8199d2771745f8c68868dcd",
+      "bytes": 15488
+    },
+    {
+      "path": "site/optimizer.html",
+      "sha256": "4574df58f6b032d3f80d77ebc611d233726adaa6e543361165677c1183968383",
+      "bytes": 8886
+    },
+    {
+      "path": "tests/optimizer.test.mjs",
+      "sha256": "5bc315e57508b8fc028d2524971a36ac52ba2bcce7904de3cc6c1b7f1d48886d",
+      "bytes": 15011
+    }
+  ]
+}
